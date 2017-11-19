@@ -10,14 +10,19 @@ import UIKit
 
 final class ApplicationCoordinator: Coordinator {
     private var window: UIWindow
+    private(set) var rootViewController: RootViewController = RootViewController.viewController(text: "Root")
+    private(set) var tabBarController: UITabBarController = UITabBarController()
+    private(set) lazy var tabBarCoordinator: RootTabBarCoordinator = RootTabBarCoordinator(tabBarController: tabBarController)
     
     init(window: UIWindow) {
         self.window = window
+        
     }
     
     func start() {
-        let rootViewController = RootViewController.viewController(text: "Root")
         window.rootViewController = rootViewController
+        rootViewController.embededViewController = tabBarController
+        tabBarCoordinator.start()
         window.makeKeyAndVisible()
     }
 }

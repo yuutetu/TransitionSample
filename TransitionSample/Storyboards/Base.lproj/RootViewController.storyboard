@@ -24,17 +24,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aV-Gc-7vP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EPb-Mz-3FN" secondAttribute="bottom" id="2Ow-YT-0g8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6aV-Gc-7vP" secondAttribute="trailing" id="5BV-f5-cf6"/>
                             <constraint firstItem="EPb-Mz-3FN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Iss-KV-OBw"/>
+                            <constraint firstItem="6aV-Gc-7vP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LJ4-pQ-bzU"/>
                             <constraint firstItem="EPb-Mz-3FN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N0s-wk-URY"/>
+                            <constraint firstItem="6aV-Gc-7vP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gE5-bX-tJD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6aV-Gc-7vP" secondAttribute="bottom" id="x39-Aq-fOS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EPb-Mz-3FN" secondAttribute="trailing" id="xEm-gB-Gfc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="embededContainerView" destination="6aV-Gc-7vP" id="Kw5-XS-Rf3"/>
                         <outlet property="label" destination="EPb-Mz-3FN" id="LCQ-ZI-sAy"/>
                     </connections>
                 </viewController>

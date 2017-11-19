@@ -16,6 +16,7 @@
 		202899CB1FC0F97A0005A0B7 /* TransitionSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202899CA1FC0F97A0005A0B7 /* TransitionSampleUITests.swift */; };
 		202899DA1FC0F9FA0005A0B7 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202899D91FC0F9FA0005A0B7 /* ApplicationCoordinator.swift */; };
 		202899DF1FC0FB3D0005A0B7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202899DE1FC0FB3D0005A0B7 /* Coordinator.swift */; };
+		202899E11FC104970005A0B7 /* RootTabBarCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202899E01FC104970005A0B7 /* RootTabBarCoodinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		202899CC1FC0F97A0005A0B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		202899D91FC0F9FA0005A0B7 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		202899DE1FC0FB3D0005A0B7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		202899E01FC104970005A0B7 /* RootTabBarCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarCoodinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +135,9 @@
 		202899D81FC0F9DD0005A0B7 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				202899D91FC0F9FA0005A0B7 /* ApplicationCoordinator.swift */,
 				202899DE1FC0FB3D0005A0B7 /* Coordinator.swift */,
+				202899D91FC0F9FA0005A0B7 /* ApplicationCoordinator.swift */,
+				202899E01FC104970005A0B7 /* RootTabBarCoodinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202899E11FC104970005A0B7 /* RootTabBarCoodinator.swift in Sources */,
 				202899DF1FC0FB3D0005A0B7 /* Coordinator.swift in Sources */,
 				202899AD1FC0F9790005A0B7 /* RootViewController.swift in Sources */,
 				202899AB1FC0F9790005A0B7 /* AppDelegate.swift in Sources */,
