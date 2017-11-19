@@ -12,11 +12,7 @@ class RootViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var embededContainerView: UIView!
     private var labelText: String?
-    var embededViewController: UIViewController? {
-        didSet {
-            setupEmbededViewController()
-        }
-    }
+    var embededViewController: UIViewController?
     
     static func viewController(text: String) -> RootViewController {
         let viewController = UIStoryboard(name: "RootViewController", bundle: nil).instantiateInitialViewController() as! RootViewController
@@ -27,6 +23,7 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = labelText
+        setupEmbededViewController()
     }
     
     func setupEmbededViewController() {
@@ -44,39 +41,39 @@ class RootViewController: UIViewController {
         
         addChildViewController(embededViewController)
         embededContainerView.addSubview(embededViewController.view)
-        embededViewController.view.addConstraints([
+        embededContainerView.addConstraints([
             NSLayoutConstraint(
-                item: embededContainerView,
+                item: embededViewController.view,
                 attribute: .top,
                 relatedBy: .equal,
-                toItem: embededViewController.view,
+                toItem: embededContainerView,
                 attribute: .top,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
-                item: embededContainerView,
+                item: embededViewController.view,
                 attribute: .bottom,
                 relatedBy: .equal,
-                toItem: embededViewController.view,
+                toItem: embededContainerView,
                 attribute: .bottom,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
-                item: embededContainerView,
+                item: embededViewController.view,
                 attribute: .leading,
                 relatedBy: .equal,
-                toItem: embededViewController.view,
+                toItem: embededContainerView,
                 attribute: .leading,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
-                item: embededContainerView,
+                item: embededViewController.view,
                 attribute: .trailing,
                 relatedBy: .equal,
-                toItem: embededViewController.view,
+                toItem: embededContainerView,
                 attribute: .trailing,
                 multiplier: 1.0,
                 constant: 0
